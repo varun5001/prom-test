@@ -1,0 +1,16 @@
+---
+declared-services:
+  Conversation-qn:
+    label: Conversation
+    plan: free
+applications:
+- name: conv-201-xxx-calc
+  command: npm start
+  path: .
+  memory: 512M
+  instances: 1
+  services:
+  - Conversation-qn
+  env:
+    NPM_CONFIG_PRODUCTION: false
+    WORKSPACE_ID: 7dfbc190-50cd-4db6-ae19-6c379a9e7f55
